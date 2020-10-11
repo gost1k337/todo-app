@@ -11,10 +11,17 @@
 
 <script>
 import Navbar from "@/components/Navbar";
+import { mapActions } from "vuex";
 export default {
   name: "App",
   components: {
     Navbar
+  },
+  methods: {
+    ...mapActions(["fetchTodos"])
+  },
+  mounted() {
+    this.fetchTodos();
   }
 };
 </script>

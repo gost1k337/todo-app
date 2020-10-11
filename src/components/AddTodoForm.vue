@@ -32,8 +32,7 @@ export default {
       if (!this.title.trim()) {
         return;
       }
-      const todo = { title: this.title, completed: false };
-      this.addTodo(todo);
+      this.addTodo({ title: this.title, completed: false });
       this.title = "";
     }
   }
